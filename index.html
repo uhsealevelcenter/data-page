@@ -79,15 +79,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/jquery.tablesorter.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src='config.js'></script>
 	
     <script type="text/javascript">
+
+    var URL_pre = ""
+    if (DEVELOPMENT) URL_pre = SERVER_URL;
 
         $.ajaxSetup({
             cache: false
         });
 
         function doAjax(dataType) {
-        $.ajax({url: dataType + ".html",
+        $.ajax({url: URL_pre + dataType + ".html",
 	    success: function(result){
                 $("#sorttable").html(result);
                 $('#table').tablesorter( {sortList: [[0,0]]} );
