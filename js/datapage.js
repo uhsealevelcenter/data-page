@@ -7,7 +7,7 @@ $.ajaxSetup({
 });
 
 function doAjax(dataType) {
-  $.ajax({url: URL_PRE + dataType + ".html",
+  $.ajax({url: URL_pre + dataType + ".html",
   success: function(result){
     $("#sorttable").html(result);
     $('#table').tablesorter( {sortList: [[0,0]]} );
