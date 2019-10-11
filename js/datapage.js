@@ -1,13 +1,15 @@
 var URL_pre = ""
 if (DEVELOPMENT) URL_pre = SERVER_URL;
 
+var datatype = "fd"
+
 //country = null
 $.ajaxSetup({
   cache: false
 });
 
 function doAjax(dataType) {
-  $.ajax({url: URL_PRE + dataType + ".html",
+  $.ajax({url: URL_pre + dataType + ".html",
   success: function(result){
     $("#sorttable").html(result);
     $('#table').tablesorter( {sortList: [[0,0]]} );
@@ -20,9 +22,16 @@ function doAjax(dataType) {
 };
 
 function disclaimer(clicked) {
-  country = clicked.target.offsetParent.parentElement.cells[3].innerText;
+  console.log(datatype);
+  if (datatype = "fd") {
+    country = clicked.target.offsetParent.parentElement.cells[3].innerText;
+  } 
+  if (datatype = "rq") {
+    country = clicked.target.offsetParent.parentElement.cells[4].innerText;
+  }
   link = clicked.currentTarget.href;
-  //console.log(country);
+  
+  console.log(country);
   //console.log(link);
   //console.log(clicked);
   if (country == 'South Africa') {
@@ -41,9 +50,7 @@ function disclaimer(clicked) {
 $(document).ready(function() {
 
   //	var datatype = window.location.hash.substring(1);
-  var datatype = window.location.search.substring(1);
-
-  console.log(datatype);
+  datatype = window.location.search.substring(1);
 
   if (datatype == "fd") {
     doAjax('fd');
@@ -53,7 +60,7 @@ $(document).ready(function() {
     doAjax('fd');
   }
 
-  console.log(datatype);
+  // console.log(datatype);
 
 
   $('a[href*=#]:not([href=#])').click(function() {
