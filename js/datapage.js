@@ -23,10 +23,10 @@ function doAjax(dataType) {
 
 function disclaimer(clicked) {
   console.log(datatype);
-  if (datatype = "fd") {
+  if (datatype == "fd") {
     country = clicked.target.offsetParent.parentElement.cells[3].innerText;
   } 
-  if (datatype = "rq") {
+  else if (datatype == "rq") {
     country = clicked.target.offsetParent.parentElement.cells[4].innerText;
   }
   link = clicked.currentTarget.href;
