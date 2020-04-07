@@ -50,7 +50,12 @@ function disclaimer(clicked) {
 $(document).ready(function() {
 
   //	var datatype = window.location.hash.substring(1);
-  datatype = window.location.search.substring(1);
+  if (window.location.search.substring(1) == "") {
+     datatype = "fd";
+  } else {
+     datatype = window.location.search.substring(1);
+  }
+//  datatype = window.location.search.substring(1);
 
   if (datatype == "fd") {
     doAjax('fd');
