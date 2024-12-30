@@ -300,11 +300,16 @@ table.tablesorter thead tr .header {
 table.tablesorter tbody td {
 	color: #3D3D3D;
 	padding: 4px;
-	background-color: #FFF;
 	vertical-align: top;
 }
-table.tablesorter tbody tr.odd td {
-	background-color:#F0F0F6;
+table.tablesorter tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+table.tablesorter tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+table.tablesorter tbody tr:hover {
+    background-color:#e6EEEE;   
 }
 table.tablesorter thead tr .headerSortUp {
 	background-image: url(../assets/asc.gif);
