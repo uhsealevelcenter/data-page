@@ -84,6 +84,9 @@ h3.sectionTitle {
 	letter-spacing: -2px;
 	font-weight: 700;
 }
+.navbar-brand img {
+	height: 60px;
+}
 .navbar-inverse .navbar-brand {
     color: #428BCA;
 }
