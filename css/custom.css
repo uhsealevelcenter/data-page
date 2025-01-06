@@ -28,9 +28,13 @@ a {
 	-moz-transition: 0.25s;
 	-o-transition: 0.25s;
 	transition: 0.25s;
+	color: #086BA5;
+}
+a:hover {
+	color: #086BA5;
 }
 h2.sectionTitle {
-	color: #428BCA;
+	color: #086BA5;
     font-size: 50px;
     margin-top: 0;
     text-align: center;
@@ -85,7 +89,7 @@ h3.sectionTitle {
 	font-weight: 700;
 }
 .navbar-brand img {
-	height: 60px;
+    width: 375px;
 }
 .navbar-inverse .navbar-brand {
     color: #428BCA;
@@ -99,7 +103,7 @@ h3.sectionTitle {
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
     background: none;
-    color: #428BCA;
+    color: #086BA5;
 }
 .navbar > .container .navbar-brand,
 .navbar > .container-fluid .navbar-brand {
@@ -285,7 +289,7 @@ table.tablesorter {
 	text-align: left;
 }
 table.tablesorter thead tr th, table.tablesorter tfoot tr th {
-	background-color: #e6EEEE;
+	background-color: #D7EFFE;
 	border: 1px solid #FFF;
 	font-size: 8pt;
 	padding: 4px;
@@ -312,7 +316,7 @@ table.tablesorter tbody tr:nth-child(even) {
     background-color: #ffffff;
 }
 table.tablesorter tbody tr:hover {
-    background-color:#e6EEEE;   
+    background-color:#D7EFFE;   
 }
 table.tablesorter thead tr .headerSortUp {
 	background-image: url(../assets/asc.gif);
@@ -321,5 +325,5 @@ table.tablesorter thead tr .headerSortDown {
 	background-image: url(../assets/desc.gif);
 }
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
-background-color: #8dbdd8;
+background-color: #77C9F9;
 }
